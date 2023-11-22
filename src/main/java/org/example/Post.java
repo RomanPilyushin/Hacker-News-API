@@ -1,8 +1,11 @@
 package org.example;
 
+import lombok.Getter;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Getter
 public class Post {
 
 	private static final String HN_URL_PREFIX = "http://news.ycombinator.com/";
@@ -11,6 +14,7 @@ public class Post {
 
 	private int rank;
 	private int score;
+	// Getters
 	private int comments;
 	private String title;
 	private String url;
@@ -18,43 +22,6 @@ public class Post {
 	private String userURL;
 	private String commentsURL;
 	private String timeAgo;
-
-	// Getters
-	public int getComments() {
-		return comments;
-	}
-
-	public String getCommentsURL() {
-		return commentsURL;
-	}
-
-	public int getRank() {
-		return rank;
-	}
-
-	public int getScore() {
-		return score;
-	}
-
-	public String getTimeAgo() {
-		return timeAgo;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public String getUser() {
-		return user;
-	}
-
-	public String getUserURL() {
-		return userURL;
-	}
 
 	// Setters
 	public void setComments(String commentString) {
